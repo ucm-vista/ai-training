@@ -89,30 +89,89 @@ document.addEventListener('DOMContentLoaded', () => {
   toggles.forEach(toggle => {
     toggle.addEventListener('click', () => {
       const content = toggle.nextElementSibling;
-      const isOpen = content.style.maxHeight;
-
-      // Close all other examples in the same section
-      const section = toggle.closest('.feature-section');
-      if (section) {
-        section.querySelectorAll('.example-content').forEach(other => {
-          if (other !== content) {
-            other.style.maxHeight = null;
-            const otherToggle = other.previousElementSibling;
-            if (otherToggle) {
-              otherToggle.classList.remove('active');
-            }
-          }
-        });
-      }
+      if (!content) return;
+      const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
 
       // Toggle current
       if (isOpen) {
         content.style.maxHeight = null;
         toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        content.setAttribute('aria-hidden', 'true');
       } else {
         content.style.maxHeight = content.scrollHeight + 'px';
         toggle.classList.add('active');
+        toggle.setAttribute('aria-expanded', 'true');
+        content.setAttribute('aria-hidden', 'false');
       }
+    });
+  });
+});
+
+const CopyUI = (() => {
+  let toastTimer;
+
+  function getToast() {
+    let toast = document.querySelector('.copy-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'copy-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      toast.setAttribute('aria-atomic', 'true');
+      document.body.appendChild(toast);
+    }
+    return toast;
+  }
+
+  function showToast(message, isError = false) {
+    const toast = getToast();
+    toast.textContent = message;
+    toast.classList.toggle('error', isError);
+    toast.classList.add('visible');
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('visible');
+    }, 2000);
+  }
+
+  return { showToast };
+})();
+
+// Copy buttons for sample prompts
+document.addEventListener('DOMContentLoaded', () => {
+  const snippetButtons = document.querySelectorAll('.copy-snippet-btn');
+
+  snippetButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const targetId = button.dataset.copyTarget;
+      const target = targetId ? document.getElementById(targetId) : null;
+      const text = target ? target.innerText.trim() : '';
+      const icon = button.querySelector('.copy-snippet-icon');
+      const originalIcon = icon ? icon.textContent : '';
+
+      if (!text) return;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        if (icon) {
+          icon.textContent = '✓';
+        }
+        CopyUI.showToast('Copied to clipboard');
+      } catch (err) {
+        console.error('Failed to copy snippet', err);
+        CopyUI.showToast('Copy failed', true);
+        return;
+      }
+
+      setTimeout(() => {
+        button.classList.remove('copied');
+        if (icon) {
+          icon.textContent = originalIcon || '📋';
+        }
+      }, 2000);
     });
   });
 });

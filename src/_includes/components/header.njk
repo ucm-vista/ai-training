@@ -1,5 +1,8 @@
 <header class="site-header">
-  <a class="brand" href="{{ '/' | url }}">{{ site.title }}</a>
+  <a class="brand" href="{{ '/' | url }}">
+    <img src="{{ '/assets/VISTA_LogoSquare.png' | url }}" alt="Vista Logo" class="brand-logo">
+    <span class="brand-text">{{ site.title }}</span>
+  </a>
   <nav>
     <a href="{{ '/gpt-in-practice/' | url }}">GPT in Practice</a>
   </nav>
