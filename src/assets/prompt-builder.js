@@ -108,6 +108,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Close section buttons
+document.addEventListener('DOMContentLoaded', () => {
+  const closeButtons = document.querySelectorAll('.close-section-btn');
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const sectionId = button.dataset.section;
+      const toggle = document.getElementById(`toggle-${sectionId}`);
+
+      if (toggle) {
+        const content = toggle.nextElementSibling;
+        if (content) {
+          // Close the section even if inline max-height is absent
+          content.style.maxHeight = null;
+          toggle.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+          content.setAttribute('aria-hidden', 'true');
+
+          // Scroll to the toggle button
+          toggle.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    });
+  });
+});
+
 const CopyUI = (() => {
   let toastTimer;
 

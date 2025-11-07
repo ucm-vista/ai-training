@@ -193,6 +193,24 @@ a:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
+.feature-figure {
+  margin: 24px auto;
+  text-align: center;
+}
+
+.feature-figure img {
+  max-width: 100%;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.feature-figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 /* ========================================
    Code & Keyboard
    ======================================== */
@@ -485,13 +503,16 @@ th {
   background: transparent;
 }
 
-.copyable-snippet-text {
+.copyable-snippet pre {
+  margin: 0;
+  border: none;
+  border-radius: 12px;
   background: transparent;
-  padding: 20px 20px 56px;
+  padding: 16px 16px 48px;
   white-space: pre-wrap;
   font-family: inherit;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.35;
   color: var(--text);
 }
 
@@ -618,6 +639,32 @@ th {
   margin-top: -12px;
 }
 
+.close-section-btn {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.close-section-btn:hover {
+  background: var(--bg);
+  border-color: var(--lav);
+  color: var(--lav);
+}
+
+.close-section-btn:active {
+  transform: translateY(1px);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .prompt-builder {
@@ -632,5 +679,27 @@ th {
   .copy-prompt-btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .copyable-snippet {
+    overflow-x: auto;
+  }
+
+  .copyable-snippet pre {
+    font-size: 0.8rem;
+    padding: 12px 12px 52px;
+    min-width: fit-content;
+  }
+
+  .copy-snippet-btn {
+    bottom: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .example-content-inner {
+    padding: 12px;
   }
 }
