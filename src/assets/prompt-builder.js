@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const content = toggle.nextElementSibling;
         if (content) {
           // Close the section even if inline max-height is absent
-          content.style.maxHeight = null;
+          content.style.maxHeight = '0px';
           toggle.classList.remove('active');
           toggle.setAttribute('aria-expanded', 'false');
           content.setAttribute('aria-hidden', 'true');

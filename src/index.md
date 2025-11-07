@@ -270,7 +270,40 @@ If some information is missing, note it clearly in the CSV. Before returning the
     </button>
     <div id="content-gpts" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-gpts">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>GPTs</strong> are custom versions of ChatGPT you can tailor for a specific workflow—mix your own instructions, upload files or PDFs to extend its knowledge, and grant tool/API permissions so it behaves like a mini specialist for your team.</p>
+        <p>To browse or launch one, open ChatGPT and click <strong>Explore GPTs</strong> (left sidebar) or head to <a href="https://chatgpt.com/gpts" target="_blank" rel="noopener">chatgpt.com/gpts</a>. To build your own, go to <a href="https://chatgpt.com/create" target="_blank" rel="noopener">chatgpt.com/create</a> and follow the guided builder—then keep it private, share it internally with your org, or publish it.</p>
+        <p><strong>How to create a GPT</strong></p>
+        <ol>
+          <li>Describe the role: in the builder chat, explain what the GPT should do and who it serves.</li>
+          <li>Add knowledge + tools: upload files or paste docs, then toggle which capabilities it can use (web search, code interpreter, image generation, or advanced API “actions” for power users).</li>
+          <li>Set sharing: keep it private, restrict it to your workspace, or publish it publicly/GPT Store once verified.</li>
+        </ol>
+        <p>Great use cases include internal playbooks, branded writing assistants, lab equipment concierges, onboarding buddies, data-cleaning bots, classroom tutors, and more.</p>
+
+        <h4>Sample GPT – Field SOP Companion</h4>
+        <p>Give your team a repeatable helper that answers questions straight from Trimble and other equipment SOPs.</p>
+        <div class="resource-buttons">
+          <a class="resource-btn" href="https://chatgpt.com/create" target="_blank" rel="noopener">➕ Create a new GPT</a>
+          <a class="resource-btn" href="{{ '/assets/Trimble TDC600 - SOP.docx' | url }}" target="_blank" rel="noopener" download>⬇️ Download Trimble TDC600 SOP</a>
+        </div>
+        <p class="asset-note">Workflow: 1) Click “Create a new GPT” and paste the instructions below. 2) Go to the Configure tab, upload the Trimble SOP into Knowledge, and disable Canvas + Image generation. 3) Save/share to your org and test by asking “How do I collect field data with the TDC600?”</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="gpt-vista">System instructions: You are the UC Merced Field SOP Companion. Answer questions strictly using the uploaded Standard Operating Procedures (starting with the Trimble TDC600) and flag any missing steps.
+
+Knowledge pack (Configure → Knowledge): Trimble TDC600 SOP DOCX plus any future equipment SOPs.
+
+Capabilities: Enable Browse + Code Interpreter for weather lookups + quick calcs. Disable Canvas and Image generation.
+
+Behavior requirements:
+  • Begin each response with a short summary, then cite SOP section headings.
+  • If the SOP lacks an answer, say so and list the required info to proceed.
+  • Provide step-by-step checklists for field tasks and remind users about PPE + data logging.
+  • Offer download links to referenced SOPs when available.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy GPT instructions" data-copy-target="gpt-vista">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
         <button type="button" class="close-section-btn" data-section="gpts">Close GPTs section</button>
       </div>
     </div>

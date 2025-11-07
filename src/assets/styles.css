@@ -254,6 +254,33 @@ a:hover {
   margin: 4px 0 8px;
 }
 
+.resource-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 12px 0 8px;
+}
+
+.resource-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.resource-btn:hover {
+  border-color: var(--lav);
+  color: var(--lav);
+}
+
 /* ========================================
    Code & Keyboard
    ======================================== */
