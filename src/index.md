@@ -315,7 +315,37 @@ Behavior requirements:
     </button>
     <div id="content-memory" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-memory">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>Memory</strong> lets ChatGPT remember helpful facts from your chats so you don’t have to repeat yourself. You can explicitly tell it, “Remember this,” or let it pick up consistent preferences (tone, report format, campus context) on its own.</p>
+        <p>Control lives under <strong>Settings → Personalization → Memory</strong>: view or delete individual memories, clear everything, or turn the feature off entirely. For one-off conversations where you don’t want anything saved, start a temporary chat.</p>
+        <p>Pro tip: pair memory with Custom Instructions. Use memory for living facts (“UC Merced’s VISTA team runs field days every May”) and leave timeless guidance (“Always format agendas with bullets”) in Custom Instructions.</p>
+
+        <h4>Sample Prompt – Capture a UC Merced Detail</h4>
+        <p>Use explicit commands when you want ChatGPT to store something.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="memory-remember">Please remember that UC Merced’s Sustainable Ag field office prefers summaries with three action items and that the 2025 Field Day happens on May 16 at the Experimental Farm.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="memory-remember">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Prompt – Preview What It Knows</h4>
+        <p>Ask for a recap to verify memories or tailor future requests.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="memory-recap">Can you review our previous conversations and identify my writing/communication style and outline it for me.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="memory-recap">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <p><strong>Follow-up Prompt</strong></p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="memory-recap-followup">Thanks for the style summary. Using that voice, draft an invitation email for our UC Merced training session on using GPT and AI. Keep it friendly, add a short agenda, and call out next Tuesday at noon in SE1 130.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="memory-recap-followup">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <p>If you change your mind, just say “Forget that detail about Field Day” (or clear it in Manage Memory). ChatGPT’s memories aren’t tied to a single chat, so deletions must happen via the memory list, not by deleting the conversation.</p>
         <button type="button" class="close-section-btn" data-section="memory">Close Memory section</button>
       </div>
     </div>
