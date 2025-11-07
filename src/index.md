@@ -1,6 +1,6 @@
 ---
 layout: page.njk
-title: GPT in Practice
+title: Working with ChatGPT
 subtitle: Mastering ChatGPT's advanced capabilities
 ---
 
