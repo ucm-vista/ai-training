@@ -5,7 +5,7 @@ node_modules/
 _site/
 
 # Package manager lock files
-package-lock.json
+# Note: package-lock.json should be committed for npm projects
 yarn.lock
 pnpm-lock.yaml
 
