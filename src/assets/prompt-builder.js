@@ -201,3 +201,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Copy image assets to clipboard
+document.addEventListener('DOMContentLoaded', () => {
+  const imageButtons = document.querySelectorAll('.copy-image-btn');
+
+  imageButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const src = button.dataset.imageSrc;
+      if (!src) return;
+
+      const originalContent = button.innerHTML;
+      button.disabled = true;
+
+      try {
+        if (navigator.clipboard && navigator.clipboard.write && window.ClipboardItem) {
+          const response = await fetch(src);
+          const blob = await response.blob();
+          const clipboardItem = new ClipboardItem({ [blob.type]: blob });
+          await navigator.clipboard.write([clipboardItem]);
+          button.innerHTML = 'Copied image!';
+          button.classList.add('copied');
+          CopyUI.showToast('Icon copied to clipboard');
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+          const absoluteUrl = new URL(src, window.location.origin).href;
+          await navigator.clipboard.writeText(absoluteUrl);
+          button.innerHTML = 'Copied link!';
+          CopyUI.showToast('Icon link copied');
+        } else {
+          throw new Error('Clipboard API not supported');
+        }
+      } catch (err) {
+        console.error('Failed to copy image', err);
+        CopyUI.showToast('Image copy failed', true);
+      } finally {
+        setTimeout(() => {
+          button.innerHTML = originalContent;
+          button.classList.remove('copied');
+          button.disabled = false;
+        }, 2000);
+      }
+    });
+  });
+});

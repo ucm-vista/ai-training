@@ -221,7 +221,44 @@ If some information is missing, note it clearly in the CSV. Before returning the
     </button>
     <div id="content-image-generation" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-image-generation">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>Image generation</strong> taps the latest DALL·E models directly inside ChatGPT—perfect for mockups, illustration explorations, or quick renderings to drop into slides.</p>
+        <p>Open the tools menu, toggle <strong>Image</strong>, and describe what you need; you can iterate with follow-up edits, request variations, or upscale outputs for final assets.</p>
+
+        <h4>Sample Prompt – VISTA Field Day Poster</h4>
+        <p>Create branded art for the VISTA Lab’s on-farm showcase and include the official icon.</p>
+        <figure class="feature-figure feature-figure--small">
+          <img src="{{ '/assets/VISTA_LogoSquare.png' | url }}" alt="VISTA Lab icon">
+          <figcaption>Use the button below to copy the icon directly into your prompt.</figcaption>
+        </figure>
+        <button type="button" class="copy-image-btn" data-image-src="{{ '/assets/VISTA_LogoSquare.png' | url }}">
+          <span aria-hidden="true">📎</span>
+          Copy VISTA icon to clipboard
+        </button>
+        <p class="asset-note">After copying, paste both the prompt and the VISTA icon image into ChatGPT so it knows exactly what badge to render.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="image-merced">Design a watercolor poster for "VISTA Lab Field Day" at the UC Merced Experimental Farm. Show students walking test plots, portable sensors, and tasting stations under shade sails, with warm evening light and soft grain. Incorporate the VISTA icon (attached) as a badge near the headline, leave negative space for agenda text, and keep the palette in UC Merced blue/gold with sun-faded oranges.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="image-merced">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Prompt – Field Sensor Explainer</h4>
+        <p>Pair image generation with technical storytelling.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="image-sensor">Generate a clean isometric diagram showing an almond orchard row with soil-moisture probes, a solar-powered telemetry mast with on-board data logger, and a small drone capturing multispectral imagery overhead. Emphasize data flow using graceful dotted lines from probes → mast → drone → cloud icon, but do not add text labels. Keep the palette muted with teal, sage, and warm gray tones.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="image-sensor">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Prompt – Embossed Bee Pattern</h4>
+        <p>Produce a refined repeating texture for backgrounds or slide accents.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="image-bee">Generate a seamless repeating pattern of stylized bees arranged in a tidy grid, resembling embossed logos pressed into a flat surface. Keep the palette neutral (white, cream, or light stone), add soft directional lighting with gentle shadows for a low-relief 3D feel, and aim for uniform, minimalist bee silhouettes that convey a calm, elegant wallpaper.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="image-bee">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
         <button type="button" class="close-section-btn" data-section="image-generation">Close Image Generation section</button>
       </div>
     </div>
