@@ -142,6 +142,11 @@ If some information is missing, note it clearly in the CSV. Before returning the
       <div class="example-content-inner">
         <p><strong>ChatGPT Search</strong> blends natural conversation with live web lookups for everyone. Ask normally and it will search when it needs fresh info, or tap the globe icon to force a real-time pass.</p>
         <p>Results come back with inline citations, a Sources sidebar, and rich cards for things like weather, stocks, sports, news, and maps so you can double-check context before sharing.</p>
+        <p>Click the <strong>Search</strong> globe icon in the composer (see below) whenever you want to guarantee a live crawl.</p>
+        <figure class="feature-figure">
+          <img src="{{ '/assets/search.png' | url }}" alt="Search globe icon highlighted inside ChatGPT">
+          <figcaption>Toggle Search directly from the composer.</figcaption>
+        </figure>
 
         <h4>Sample Prompt – Merced Infrastructure Watch</h4>
         <p>Use search to stay current on local buildouts without hopping through a dozen tabs.</p>
@@ -171,7 +176,40 @@ If some information is missing, note it clearly in the CSV. Before returning the
     </button>
     <div id="content-deep-research" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-deep-research">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>Deep research</strong> is an agentic run that can spend 5–30 minutes reading hundreds of sources, reasoning through contradictions, and returning a fully cited report you can use as work product.</p>
+        <p>Select it from the composer when you need multi-step analysis: you’ll see a live steps sidebar, can attach spreadsheets or PDFs for context, and will get a notification once the research-grade summary, data tables, and citations are ready.</p>
+        <p><em>When to use it:</em> reach for deep research when you need 20–30 minutes of autonomous digging with rigorous citations; use Search for quick fact checks or timely snippets, and Agent mode when you need hands-on workflows (logins, downloads, spreadsheets, task execution).</p>
+        <p>Turn it on by clicking the <strong>Deep research</strong> button in the tools dropdown (pictured below), then send your long-form question.</p>
+        <figure class="feature-figure">
+          <img src="{{ '/assets/research.png' | url }}" alt="Deep research option highlighted inside ChatGPT">
+          <figcaption>Enable deep research from the composer before submitting your query.</figcaption>
+        </figure>
+
+        <h4>Sample Prompt – Floodplain Retrofits Dossier</h4>
+        <p>Offload the kind of multi-source policy digging that usually eats an afternoon.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="deep-floodplain">Produce a 3-page briefing on multi-benefit floodplain retrofit projects in the Sacramento–San Joaquin Delta funded since 2022. Include:
+• Table of projects (location, sponsor, budget, permitting status, ecosystem/ag benefits)
+• Analysis of which funding programs (DWR, NOAA, USBR, philanthropic) are backing them
+• Regulatory or community hurdles noted in meeting minutes or EIRs
+• Citations for every claim and a short "next actions" section for UC Merced Water Systems researchers.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="deep-floodplain">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Prompt – NDAA-Compliant Drone Matrix</h4>
+        <p>Task deep research with a procurement-style evaluation.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="deep-commuter">Identify NDAA-compliant drones that can carry a MicaSense Altum PT or comparable LiDAR payload (2.5–3 kg class). For each viable airframe:
+• Confirm payload specs, flight time with that payload, and integration notes for Altum PT/LiDAR kits
+• Pull recent (2023–2025) operator reviews or field reports highlighting pros/cons
+• Note pricing, lead times, and any ITAR/export constraints
+• Summarize in a table plus a narrative recommendation section (best for ag sensing, best for infrastructure, etc.) with full citations.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="deep-commuter">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
         <button type="button" class="close-section-btn" data-section="deep-research">Close Deep Research section</button>
       </div>
     </div>
