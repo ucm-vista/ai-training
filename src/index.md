@@ -357,7 +357,48 @@ Behavior requirements:
     </button>
     <div id="content-projects" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-projects">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>Projects</strong> are smart workspaces where chats, files, memory, and instructions live together so ChatGPT stays anchored to a single effort (research sprint, launch plan, class notes, etc.).</p>
+        <p>Create one by clicking <strong>New project</strong> in ChatGPT’s sidebar: name it, pick an icon, then drop in files (PDFs, spreadsheets, images) and project-specific instructions. Chats inside the project automatically inherit that context and project memory, so you can hop between devices without losing the plot.</p>
+        <p>Need to collaborate? Use the <strong>Share</strong> button to invite teammates (chat or edit access) or generate a workspace link—perfect for UC Merced labs coordinating weekly reports. Learn more in the <a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt" target="_blank" rel="noopener">Projects in ChatGPT guide</a>.</p>
+
+        <h4>Quick Setup Checklist</h4>
+        <ol>
+          <li>Click <strong>New project</strong>, give it a descriptive name (e.g., “Delta Allocations Watch”), and choose an icon/color.</li>
+          <li>Upload reference files (policies, datasets, SOPs). Projects for Free/Plus allow up to 5/25 files respectively.</li>
+          <li>Add project instructions via the menu → “Project instructions” (tone, format, intake questions).</li>
+          <li>Decide on memory mode: default (can reference outside chats) or project-only (keeps everything locked to this workspace).</li>
+          <li>Share with teammates (optional) and set access (Chat vs Edit).</li>
+        </ol>
+
+        <h4>Sample Prompt – Yosemite Lake Bathymetry Brief</h4>
+        <p>Use this inside a fresh project to lock in the goal, gear, and cadence.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="project-kickoff">We’re launching a “Yosemite Lake Bathymetry” project. Goal: produce a seasonal subsurface depth map for the reservoir to support dredging plans.
+
+Context files (to be uploaded next): sonar-logs-2024.csv, gps-tracks.gpx, equipment-checklist.pdf.
+
+Inside this project, draft a kickoff memo that includes:
+  • Mission statement + success metrics (target grid spacing, seasonal cadence)
+  • Required equipment (Trimble TDC600, inflatable skiff, dual-frequency sonar)
+  • 6-week field/testing timeline with milestones
+  • Project instruction suggestions I can paste into the Project Instructions panel (tone, intake questions, required outputs)
+
+Return the memo in Markdown so I can copy/paste it into the project files.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="project-kickoff">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Prompt – Branch & Brief</h4>
+        <p>Great for recurring workstreams where you need a fresh angle without losing history.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="project-branch">Branch this chat and draft a Monday status brief that pulls updates from our last three conversations plus the “bathymetry-log.md” file. Include sections for Survey Coverage, Equipment Issues, Data Gaps, and Next Transects. Mention who ran each transect (by initials) so the crew can follow up.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="project-branch">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <p><em>Tip:</em> moving an existing chat into a project inherits the instructions/files instantly, so your old brainstorming thread can continue with the new context. Use project-only memory for sensitive collaborations where you don’t want cross-project bleed-through.</p>
         <button type="button" class="close-section-btn" data-section="projects">Close Projects section</button>
       </div>
     </div>
