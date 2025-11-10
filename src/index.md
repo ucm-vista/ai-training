@@ -8,7 +8,7 @@ This guide covers ChatGPT's powerful features with practical examples and sample
 
 ---
 
-Use the accordions below to jump into the tools that matter most—you can skim the overview, copy a prompt, and come back later as we fill out the remaining sections.
+Use the accordions below to jump into the tools that matter most—you can skim the overview, copy a prompt, and come back later as additional sections are added.
 
 <section class="feature-accordion">
   <div class="feature-section" id="canvas">
@@ -23,6 +23,7 @@ Use the accordions below to jump into the tools that matter most—you can skim 
         <h4>Sample Prompt 1 – Agenda Builder Workflow</h4>
         <p>Co-create a full agenda for an on-campus event, complete with locations, timeline, and narrative context.</p>
         <p><strong>Initial prompt</strong></p>
+        <p>These are the exact instructions used in this training, so feel free to copy them or tweak the tone for your own needs. To edit your own custom instructions, visit <a href="https://chatgpt.com/schedules#settings/Personalization" target="_blank" rel="noopener">chatgpt.com/schedules#settings/Personalization</a>.</p>
         <div class="copyable-snippet" markdown="0">
           <pre id="canvas-doc-initial">You are my planning partner for a one-day "UC Merced Regenerative Agriculture Workshop."
 Build a detailed agenda that starts in the Conference Center (CC) Auditorium for welcomes and keynotes, transitions to the campus Greenhouse for hands-on demos, and concludes with a guided visit to the Experimental Farm.
@@ -410,7 +411,40 @@ Return the memo in Markdown so I can copy/paste it into the project files.</pre>
     </button>
     <div id="content-scheduled-tasks" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-scheduled-tasks">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>Tasks</strong> let ChatGPT run automated prompts on your schedule—perfect for daily briefings, reminders, or recurring coaching check-ins even when you’re offline.</p>
+        <p>Just ask “Create a task that…,” then confirm the time or trigger (daily at 4 PM, one-time on March 13, API callback, etc.). You’ll get a confirmation card plus push/email notifications when each run finishes.</p>
+        <p><a href="https://chatgpt.com/schedules" target="_blank" rel="noopener">Manage tasks</a> or open <strong>Settings → Notifications → Manage tasks</strong> (Web) to pause, edit, or delete. Limit: 10 active tasks per account. Tasks currently exclude voice chats, file uploads, and GPTs.</p>
+
+        <h4>Sample Task – AES Site QA Sweep</h4>
+        <p>Stay ahead of broken links or typos across aes.ucmerced.edu without manually spot-checking every page.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="task-aes">Create a recurring task called "AES Site QA Sweep" to run every Monday at 6 AM PT.
+Each run, crawl every public page on https://aes.ucmerced.edu to check for:
+Broken or redirected links
+Spelling and grammar mistakes
+Missing files or broken images
+4xx or 5xx HTTP status codes
+Return a Markdown table listing each issue with its URL, Problem Type, Suggested Fix, and Priority, then end with a "Top Fixes" list highlighting the three most urgent items.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy task prompt" data-copy-target="task-aes">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Task – California Reservoir Snapshot</h4>
+        <p>Automate a statewide water-level briefing.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="task-brief">Create a recurring task called "Reservoir Watch" that runs every Monday at 7 AM PT.
+Each run, pull the latest public data on the following major California dams: Trinity, Shasta, Oroville, Folsom, New Melones, San Luis, Don Pedro, Millerton, Pine Flat, and Isabella.
+Summarize the following for each dam:
+Current storage percentage
+Week-over-week change in storage
+Any current curtailment advisories
+Finally, send me a notification containing the complete Markdown report and the source links used to gather the data.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy task prompt" data-copy-target="task-brief">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+        <p><em>Tip:</em> for mobile push notifications, create the task on iOS/Android first so the app can request notification permissions. For more details, see the Tasks docs inside Settings → Notifications.</p>
         <button type="button" class="close-section-btn" data-section="scheduled-tasks">Close Scheduled Tasks section</button>
       </div>
     </div>
@@ -422,7 +456,16 @@ Return the memo in Markdown so I can copy/paste it into the project files.</pre>
     </button>
     <div id="content-custom-instructions" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-custom-instructions">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>Custom instructions</strong> let you store personal context and response preferences directly inside ChatGPT. Once saved, GPT reads them before every reply so you can skip re-explaining your goals or tone.</p>
+        <p>Use it to steer style choices—for example, tell ChatGPT to avoid em dashes or certain filler phrases, and every future answer will follow your preferred voice automatically.</p>
+        <p>These are the custom instructions that I use in my GPT feel free to use them outright or tweak the tone to match your own workflow. To edit your custom instructions, open <a href="https://chatgpt.com/schedules#settings/Personalization" target="_blank" rel="noopener">chatgpt.com/schedules#settings/Personalization</a>.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="custom-style">Write like a human. Keep it professional but conversational. Don't use em dashes or buzzwords like "streamlined." Avoid sounding like a press release. Be clear, direct, and natural, like you're writing to a smart friend.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy custom instruction example" data-copy-target="custom-style">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
         <button type="button" class="close-section-btn" data-section="custom-instructions">Close Custom Instructions section</button>
       </div>
     </div>
