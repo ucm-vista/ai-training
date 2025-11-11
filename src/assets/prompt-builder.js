@@ -57,11 +57,9 @@ class PromptBuilder {
 
     try {
       await navigator.clipboard.writeText(output.textContent);
-      copyBtn.textContent = '✓ Copied!';
       copyBtn.classList.add('copied');
 
       setTimeout(() => {
-        copyBtn.textContent = originalText;
         copyBtn.classList.remove('copied');
       }, 2000);
     } catch (err) {
@@ -195,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         button.classList.remove('copied');
         if (icon) {
-          icon.textContent = originalIcon || '📋';
+          icon.textContent = originalIcon || 'Copy';
         }
       }, 2000);
     });

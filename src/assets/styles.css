@@ -7,11 +7,11 @@
   --text: #1F2937;
   --muted: #6B7280;
   --border: #E5E7EB;
-  --lav: #A78BFA;
+  --accent: #0ea5e9;
   --teal: #67E8F9;
 
   /* Spacing */
-  --radius: 18px;
+  --radius: 8px;
   --container-max: 960px;
 }
 
@@ -78,7 +78,7 @@ html, body {
 }
 
 .brand:hover .brand-text {
-  color: var(--lav);
+  color: var(--accent);
 }
 
 nav {
@@ -97,9 +97,9 @@ nav a {
 
 nav a:focus,
 nav a:hover {
-  outline: 2px solid var(--lav);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
-  background: rgba(167, 139, 250, 0.1);
+  background: rgba(14, 165, 233, 0.1);
 }
 
 /* ========================================
@@ -118,25 +118,27 @@ nav a:hover {
    Typography
    ======================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 800;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
   line-height: 1.2;
   margin: 0 0 16px;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-bottom: 8px;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-top: 32px;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 24px;
+  font-weight: 600;
 }
 
 .page-header {
@@ -227,7 +229,7 @@ a:hover {
   padding: 10px 18px;
   margin: 0 auto 12px;
   width: fit-content;
-  border-radius: 999px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   background: #fff;
   color: var(--text);
@@ -237,14 +239,14 @@ a:hover {
 }
 
 .copy-image-btn:hover {
-  border-color: var(--lav);
-  color: var(--lav);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .copy-image-btn.copied {
-  background: var(--lav);
+  background: var(--accent);
   color: #fff;
-  border-color: var(--lav);
+  border-color: var(--accent);
 }
 
 .asset-note {
@@ -267,7 +269,7 @@ a:hover {
   align-items: center;
   gap: 6px;
   padding: 10px 18px;
-  border-radius: 999px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   background: #fff;
   color: var(--text);
@@ -277,8 +279,8 @@ a:hover {
 }
 
 .resource-btn:hover {
-  border-color: var(--lav);
-  color: var(--lav);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* ========================================
@@ -344,8 +346,8 @@ li {
 blockquote {
   margin: 16px 0;
   padding: 16px 24px;
-  background: rgba(167, 139, 250, 0.05);
-  border-left: 4px solid var(--lav);
+  background: rgba(14, 165, 233, 0.05);
+  border-left: 4px solid var(--accent);
   border-radius: 8px;
   color: var(--text);
 }
@@ -413,11 +415,11 @@ th {
    ======================================== */
 .prompt-builder {
   background: #fff;
-  border: 2px solid var(--lav);
+  border: 2px solid var(--accent);
   border-radius: var(--radius);
   padding: 24px;
   margin: 24px 0;
-  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.1);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
 }
 
 .prompt-builder-title {
@@ -430,10 +432,6 @@ th {
   gap: 8px;
 }
 
-.prompt-builder-title::before {
-  content: "⚡";
-  font-size: 1.3rem;
-}
 
 .prompt-form {
   display: grid;
@@ -469,8 +467,8 @@ th {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--lav);
-  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
 }
 
 .form-group textarea {
@@ -521,7 +519,7 @@ th {
 .copy-prompt-btn {
   margin-top: 12px;
   padding: 10px 20px;
-  background: var(--lav);
+  background: var(--accent);
   color: white;
   border: none;
   border-radius: 8px;
@@ -535,9 +533,8 @@ th {
 }
 
 .copy-prompt-btn:hover {
-  background: #9270e8;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
+  background: #0284c7;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
 }
 
 .copy-prompt-btn:active {
@@ -549,11 +546,11 @@ th {
 }
 
 .copy-prompt-btn::before {
-  content: "📋";
+  content: "Copy";
 }
 
 .copy-prompt-btn.copied::before {
-  content: "✓";
+  content: "Copied";
 }
 
 /* Copyable snippets */
@@ -594,7 +591,7 @@ th {
   height: 40px;
   border: none;
   border-radius: 50%;
-  background: var(--lav);
+  background: var(--accent);
   color: #fff;
   cursor: pointer;
   display: inline-flex;
@@ -605,9 +602,8 @@ th {
 }
 
 .copy-snippet-btn:hover {
-  background: #9270e8;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(167, 139, 250, 0.45);
+  background: #0284c7;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
 }
 
 .copy-snippet-btn.copied {
@@ -625,7 +621,7 @@ th {
   background: #1f2937;
   color: #fff;
   padding: 12px 18px;
-  border-radius: 999px;
+  border-radius: 8px;
   box-shadow: 0 10px 25px rgba(31, 41, 55, 0.25);
   opacity: 0;
   transform: translateY(12px);
@@ -674,14 +670,14 @@ th {
 }
 
 .example-toggle:hover {
-  border-color: var(--lav);
-  background: rgba(167, 139, 250, 0.05);
+  border-color: var(--accent);
+  background: rgba(14, 165, 233, 0.05);
 }
 
 .example-toggle.active {
-  border-color: var(--lav);
-  background: rgba(167, 139, 250, 0.1);
-  color: var(--lav);
+  border-color: var(--accent);
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--accent);
 }
 
 .example-toggle::after {
@@ -727,8 +723,8 @@ th {
 
 .close-section-btn:hover {
   background: var(--bg);
-  border-color: var(--lav);
-  color: var(--lav);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .close-section-btn:active {
