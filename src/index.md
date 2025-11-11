@@ -8,9 +8,95 @@ This guide covers ChatGPT's powerful features with practical examples and sample
 
 ---
 
-Use the accordions below to jump into the tools that matter most—you can skim the overview, copy a prompt, and come back later as additional sections are added.
+Use the accordions below to jump into the tools and learn about what they can do. Sections are sorted by most time intensive first.
 
 <section class="feature-accordion">
+<div class="feature-section" id="deep-research">
+    <button type="button" class="example-toggle" id="toggle-deep-research" aria-expanded="false" aria-controls="content-deep-research">
+      Deep Research
+    </button>
+    <div id="content-deep-research" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-deep-research">
+      <div class="example-content-inner">
+        <p><strong>Deep research</strong> is an agentic run that can spend 5–30 minutes reading hundreds of sources, reasoning through contradictions, and returning a fully cited report you can use as work product.</p>
+        <p>Select it from the composer when you need multi-step analysis: you’ll see a live steps sidebar, can attach spreadsheets or PDFs for context, and will get a notification once the research-grade summary, data tables, and citations are ready.</p>
+        <p><em>When to use it:</em> reach for deep research when you need 20–30 minutes of autonomous digging with rigorous citations; use Search for quick fact checks or timely snippets, and Agent mode when you need hands-on workflows (logins, downloads, spreadsheets, task execution).</p>
+        <p>Turn it on by clicking the <strong>Deep research</strong> button in the tools dropdown (pictured below), then send your long-form question.</p>
+        <figure class="feature-figure">
+          <img src="{{ '/assets/research.png' | url }}" alt="Deep research option highlighted inside ChatGPT">
+          <figcaption>Enable deep research from the composer before submitting your query.</figcaption>
+        </figure>
+
+        <h4>Sample Prompt – Floodplain Retrofits Dossier</h4>
+        <p>Offload the kind of multi-source policy digging that usually eats an afternoon.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="deep-floodplain">Produce a 3-page briefing on multi-benefit floodplain retrofit projects in the Sacramento–San Joaquin Delta funded since 2022. Include:
+• Table of projects (location, sponsor, budget, permitting status, ecosystem/ag benefits)
+• Analysis of which funding programs (DWR, NOAA, USBR, philanthropic) are backing them
+• Regulatory or community hurdles noted in meeting minutes or EIRs
+• Citations for every claim and a short "next actions" section for UC Merced Water Systems researchers.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="deep-floodplain">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Prompt – NDAA-Compliant Drone Matrix</h4>
+        <p>Task deep research with a procurement-style evaluation.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="deep-commuter">Identify NDAA-compliant drones that can carry a MicaSense Altum PT or comparable LiDAR payload (2.5–3 kg class). For each viable airframe:
+• Confirm payload specs, flight time with that payload, and integration notes for Altum PT/LiDAR kits
+• Pull recent (2023–2025) operator reviews or field reports highlighting pros/cons
+• Note pricing, lead times, and any ITAR/export constraints
+• Summarize in a table plus a narrative recommendation section (best for ag sensing, best for infrastructure, etc.) with full citations.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="deep-commuter">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+        <button type="button" class="close-section-btn" data-section="deep-research">Close Deep Research section</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-section" id="agent">
+    <button type="button" class="example-toggle" id="toggle-agent" aria-expanded="false" aria-controls="content-agent">
+      Agent
+    </button>
+    <div id="content-agent" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-agent">
+      <div class="example-content-inner">
+        <p><strong>Agent mode</strong> turns ChatGPT into a full workflow partner: it opens a virtual computer, jumps between a visual browser, text browser, terminal, and APIs, and keeps its own workspace alive while it clicks, filters, downloads files, and runs code on your behalf.</p>
+        <p>Use it when you need to string together messy steps—like signing in to clunky portals, synthesizing data across multiple tabs, and returning polished artifacts—without babysitting every action. If a site requires your credentials, the agent hands control of the browser to you (or pauses) so you can log in securely, then you can grant it access again to continue. You stay in control via approval prompts, can hop in to steer, and resume the run at any time.</p>
+        <p>The new Atlas browser brings this experience into a more interactive canvas: you can watch the agent navigate, nudge it in-line, and mix manual clicks with automated steps inside the same panel.</p>
+        <p>To turn it on, open the tools dropdown in ChatGPT and click the <strong>Agent</strong> button (see below). You can hand the browser back and forth whenever a login prompt appears, then resume the run once you’re authenticated.</p>
+        <figure class="feature-figure">
+          <img src="{{ '/assets/agent.png' | url }}" alt="Agent tool highlighted inside the ChatGPT composer">
+          <figcaption>Enable Agent mode from the tools dropdown in any conversation.</figcaption>
+        </figure>
+
+        <h4>Sample Prompt – California Hydropower Inventory</h4>
+        <p>Ask the agent to map California dams with hydroelectric facilities by hopping across multiple authoritative data sources and returning a clean CSV.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="agent-delta-initial">You are a research-focused agent that can search trusted data sources and output structured results. Your task is to find all dams in California that generate hydroelectric power.
+
+Start by searching authoritative sources like the California Department of Water Resources, the U.S. Bureau of Reclamation, and the California Energy Commission. Identify which dams have hydroelectric facilities, then collect the following information for each:
+  • dam_name
+  • year_installed
+  • latitude
+  • longitude
+
+Return the results as a CSV with headers:
+dam_name,year_installed,latitude,longitude
+
+If some information is missing, note it clearly in the CSV. Before returning the data, briefly summarize how you verified which dams are hydroelectric and what data sources were used.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="agent-delta-initial">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+       
+        <button type="button" class="close-section-btn" data-section="agent">Close Agent section</button>
+      </div>
+    </div>
+  </div>
+
   <div class="feature-section" id="canvas">
     <button type="button" class="example-toggle" id="toggle-canvas" aria-expanded="false" aria-controls="content-canvas">
       Canvas
@@ -94,129 +180,7 @@ Implementation notes
     </div>
   </div>
 
-  <div class="feature-section" id="agent">
-    <button type="button" class="example-toggle" id="toggle-agent" aria-expanded="false" aria-controls="content-agent">
-      Agent
-    </button>
-    <div id="content-agent" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-agent">
-      <div class="example-content-inner">
-        <p><strong>Agent mode</strong> turns ChatGPT into a full workflow partner: it opens a virtual computer, jumps between a visual browser, text browser, terminal, and APIs, and keeps its own workspace alive while it clicks, filters, downloads files, and runs code on your behalf.</p>
-        <p>Use it when you need to string together messy steps—like signing in to clunky portals, synthesizing data across multiple tabs, and returning polished artifacts—without babysitting every action. If a site requires your credentials, the agent hands control of the browser to you (or pauses) so you can log in securely, then you can grant it access again to continue. You stay in control via approval prompts, can hop in to steer, and resume the run at any time.</p>
-        <p>The new Atlas browser brings this experience into a more interactive canvas: you can watch the agent navigate, nudge it in-line, and mix manual clicks with automated steps inside the same panel.</p>
-        <p>To turn it on, open the tools dropdown in ChatGPT and click the <strong>Agent</strong> button (see below). You can hand the browser back and forth whenever a login prompt appears, then resume the run once you’re authenticated.</p>
-        <figure class="feature-figure">
-          <img src="{{ '/assets/agent.png' | url }}" alt="Agent tool highlighted inside the ChatGPT composer">
-          <figcaption>Enable Agent mode from the tools dropdown in any conversation.</figcaption>
-        </figure>
-
-        <h4>Sample Prompt – California Hydropower Inventory</h4>
-        <p>Ask the agent to map California dams with hydroelectric facilities by hopping across multiple authoritative data sources and returning a clean CSV.</p>
-        <div class="copyable-snippet" markdown="0">
-          <pre id="agent-delta-initial">You are a research-focused agent that can search trusted data sources and output structured results. Your task is to find all dams in California that generate hydroelectric power.
-
-Start by searching authoritative sources like the California Department of Water Resources, the U.S. Bureau of Reclamation, and the California Energy Commission. Identify which dams have hydroelectric facilities, then collect the following information for each:
-  • dam_name
-  • year_installed
-  • latitude
-  • longitude
-
-Return the results as a CSV with headers:
-dam_name,year_installed,latitude,longitude
-
-If some information is missing, note it clearly in the CSV. Before returning the data, briefly summarize how you verified which dams are hydroelectric and what data sources were used.</pre>
-          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="agent-delta-initial">
-            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
-          </button>
-        </div>
-
-       
-        <button type="button" class="close-section-btn" data-section="agent">Close Agent section</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="feature-section" id="search">
-    <button type="button" class="example-toggle" id="toggle-search" aria-expanded="false" aria-controls="content-search">
-      Search
-    </button>
-    <div id="content-search" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-search">
-      <div class="example-content-inner">
-        <p><strong>ChatGPT Search</strong> blends natural conversation with live web lookups for everyone. Ask normally and it will search when it needs fresh info, or tap the globe icon to force a real-time pass.</p>
-        <p>Results come back with inline citations, a Sources sidebar, and rich cards for things like weather, stocks, sports, news, and maps so you can double-check context before sharing.</p>
-        <p>Click the <strong>Search</strong> globe icon in the composer (see below) whenever you want to guarantee a live crawl.</p>
-        <figure class="feature-figure">
-          <img src="{{ '/assets/search.png' | url }}" alt="Search globe icon highlighted inside ChatGPT">
-          <figcaption>Toggle Search directly from the composer.</figcaption>
-        </figure>
-
-        <h4>Sample Prompt – Merced Infrastructure Watch</h4>
-        <p>Use search to stay current on local buildouts without hopping through a dozen tabs.</p>
-        <div class="copyable-snippet" markdown="0">
-          <pre id="search-merced">Search for the latest news and permitting documents about new infrastructure projects in Merced (e.g., campus expansion, downtown transit hub, irrigation upgrades). For anything approved in the last 60 days, summarize scope, sponsor, expected timeline, and budget, then cite the source (city agenda, news outlet, or agency PDF).</pre>
-          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="search-merced">
-            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
-          </button>
-        </div>
-
-        <h4>Sample Prompt – Yosemite Roads Status</h4>
-        <p>Blend live conditions, official advisories, and context for trip planning.</p>
-        <div class="copyable-snippet" markdown="0">
-          <pre id="search-yosemite">Check Caltrans, National Park Service alerts, and local news for the current status of Yosemite National Park roadways (Highway 120/Tioga Pass, Glacier Point Road, Highway 41, Highway 140). Report which segments are open, closed, or under controlled access today, note any chain controls or construction delays, and include links to the official advisories.</pre>
-          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="search-yosemite">
-            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
-          </button>
-        </div>
-        <button type="button" class="close-section-btn" data-section="search">Close Search section</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="feature-section" id="deep-research">
-    <button type="button" class="example-toggle" id="toggle-deep-research" aria-expanded="false" aria-controls="content-deep-research">
-      Deep Research
-    </button>
-    <div id="content-deep-research" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-deep-research">
-      <div class="example-content-inner">
-        <p><strong>Deep research</strong> is an agentic run that can spend 5–30 minutes reading hundreds of sources, reasoning through contradictions, and returning a fully cited report you can use as work product.</p>
-        <p>Select it from the composer when you need multi-step analysis: you’ll see a live steps sidebar, can attach spreadsheets or PDFs for context, and will get a notification once the research-grade summary, data tables, and citations are ready.</p>
-        <p><em>When to use it:</em> reach for deep research when you need 20–30 minutes of autonomous digging with rigorous citations; use Search for quick fact checks or timely snippets, and Agent mode when you need hands-on workflows (logins, downloads, spreadsheets, task execution).</p>
-        <p>Turn it on by clicking the <strong>Deep research</strong> button in the tools dropdown (pictured below), then send your long-form question.</p>
-        <figure class="feature-figure">
-          <img src="{{ '/assets/research.png' | url }}" alt="Deep research option highlighted inside ChatGPT">
-          <figcaption>Enable deep research from the composer before submitting your query.</figcaption>
-        </figure>
-
-        <h4>Sample Prompt – Floodplain Retrofits Dossier</h4>
-        <p>Offload the kind of multi-source policy digging that usually eats an afternoon.</p>
-        <div class="copyable-snippet" markdown="0">
-          <pre id="deep-floodplain">Produce a 3-page briefing on multi-benefit floodplain retrofit projects in the Sacramento–San Joaquin Delta funded since 2022. Include:
-• Table of projects (location, sponsor, budget, permitting status, ecosystem/ag benefits)
-• Analysis of which funding programs (DWR, NOAA, USBR, philanthropic) are backing them
-• Regulatory or community hurdles noted in meeting minutes or EIRs
-• Citations for every claim and a short "next actions" section for UC Merced Water Systems researchers.</pre>
-          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="deep-floodplain">
-            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
-          </button>
-        </div>
-
-        <h4>Sample Prompt – NDAA-Compliant Drone Matrix</h4>
-        <p>Task deep research with a procurement-style evaluation.</p>
-        <div class="copyable-snippet" markdown="0">
-          <pre id="deep-commuter">Identify NDAA-compliant drones that can carry a MicaSense Altum PT or comparable LiDAR payload (2.5–3 kg class). For each viable airframe:
-• Confirm payload specs, flight time with that payload, and integration notes for Altum PT/LiDAR kits
-• Pull recent (2023–2025) operator reviews or field reports highlighting pros/cons
-• Note pricing, lead times, and any ITAR/export constraints
-• Summarize in a table plus a narrative recommendation section (best for ag sensing, best for infrastructure, etc.) with full citations.</pre>
-          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="deep-commuter">
-            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
-          </button>
-        </div>
-        <button type="button" class="close-section-btn" data-section="deep-research">Close Deep Research section</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="feature-section" id="image-generation">
+<div class="feature-section" id="image-generation">
     <button type="button" class="example-toggle" id="toggle-image-generation" aria-expanded="false" aria-controls="content-image-generation">
       Image Generation (DALL-E)
     </button>
@@ -264,6 +228,13 @@ If some information is missing, note it clearly in the CSV. Before returning the
       </div>
     </div>
   </div>
+  
+
+  
+
+  
+
+  
 
   <div class="feature-section" id="gpts">
     <button type="button" class="example-toggle" id="toggle-gpts" aria-expanded="false" aria-controls="content-gpts">
@@ -306,6 +277,42 @@ Behavior requirements:
         </div>
 
         <button type="button" class="close-section-btn" data-section="gpts">Close GPTs section</button>
+      </div>
+    </div>
+  </div>
+
+<div class="feature-section" id="search">
+    <button type="button" class="example-toggle" id="toggle-search" aria-expanded="false" aria-controls="content-search">
+      Search
+    </button>
+    <div id="content-search" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-search">
+      <div class="example-content-inner">
+        <p><strong>ChatGPT Search</strong> blends natural conversation with live web lookups for everyone. Ask normally and it will search when it needs fresh info, or tap the globe icon to force a real-time pass.</p>
+        <p>Results come back with inline citations, a Sources sidebar, and rich cards for things like weather, stocks, sports, news, and maps so you can double-check context before sharing.</p>
+        <p>Click the <strong>Search</strong> globe icon in the composer (see below) whenever you want to guarantee a live crawl.</p>
+        <figure class="feature-figure">
+          <img src="{{ '/assets/search.png' | url }}" alt="Search globe icon highlighted inside ChatGPT">
+          <figcaption>Toggle Search directly from the composer.</figcaption>
+        </figure>
+
+        <h4>Sample Prompt – Merced Infrastructure Watch</h4>
+        <p>Use search to stay current on local buildouts without hopping through a dozen tabs.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="search-merced">Search for the latest news and permitting documents about new infrastructure projects in Merced (e.g., campus expansion, downtown transit hub, irrigation upgrades). For anything approved in the last 60 days, summarize scope, sponsor, expected timeline, and budget, then cite the source (city agenda, news outlet, or agency PDF).</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="search-merced">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
+        <h4>Sample Prompt – Yosemite Roads Status</h4>
+        <p>Blend live conditions, official advisories, and context for trip planning.</p>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="search-yosemite">Check Caltrans, National Park Service alerts, and local news for the current status of Yosemite National Park roadways (Highway 120/Tioga Pass, Glacier Point Road, Highway 41, Highway 140). Report which segments are open, closed, or under controlled access today, note any chain controls or construction delays, and include links to the official advisories.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="search-yosemite">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+        <button type="button" class="close-section-btn" data-section="search">Close Search section</button>
       </div>
     </div>
   </div>
@@ -473,11 +480,46 @@ Finally, send me a notification containing the complete Markdown report and the 
 
   <div class="feature-section" id="atlas">
     <button type="button" class="example-toggle" id="toggle-atlas" aria-expanded="false" aria-controls="content-atlas">
-      Atlas (Upcoming Feature)
+      Atlas
     </button>
     <div id="content-atlas" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-atlas">
       <div class="example-content-inner">
-        <p>Examples and prompts coming soon.</p>
+        <p><strong>ChatGPT Atlas</strong> is a macOS browser (for now) with ChatGPT riding shotgun in every tab. Think of it as the same assistant you already use, just living inside the sites you’re signed into, so it can see what you see and help without the copy/paste shuffle.</p>
+        <p>The standout move is agent mode inside Atlas: because you’re already logged into your portals, the agent can click around those authenticated pages, capture the details you need, and finish the repetitive steps for you—no awkward handoff or re-login like the standalone agent sometimes needs.</p>
+        <p>Atlas also behaves like a normal user session, which means it can traverse sites that block typical research agents (think Amazon, lab-equipment catalogs, or specialty retailers that disable bot access). If you can open the page, Atlas can too, letting ChatGPT read listings, compare prices, and synthesize reviews directly in context.</p>
+
+        <h4>Where Atlas Helps Most</h4>
+        <ul>
+          <li><strong>Messy dashboards:</strong> let the agent walk page by page through a legacy portal to capture the details and download links for 20 reports while you stay in one window.</li>
+          <li><strong>Signed-in tools or retailer sites:</strong> keep Slack, ServiceNow, procurement hubs, Amazon, or lab-equipment catalogs open, then ask ChatGPT to collect data, trigger exports, or log updates using the session you already have.</li>
+          <li><strong>Daily admin loops:</strong> automate the “open → copy → paste” grind (compliance reports, timesheets, inventory snapshots) so Atlas handles the clicks and you just review the results.</li>
+        </ul>
+
+        <h4>How to Start</h4>
+        <ol>
+          <li>Download the macOS app at <a href="https://chatgpt.com/atlas" target="_blank" rel="noopener">chatgpt.com/atlas</a> (Free, Plus, Pro, Go) or have your Business/Enterprise/Edu admin enable it.</li>
+          <li>Sign in, import your bookmarks/passwords if you want, and decide whether browser memories should stay on—everything is optional and can be cleared anytime.</li>
+          <li>When you need hands-on help, tap the agent mode button so ChatGPT can start opening tabs, clicking links, and filling forms inside the sites you’re already using.</li>
+        </ol>
+
+        <div class="sample-response" markdown="1">
+          <p><strong>Privacy + Control Highlights</strong></p>
+          <ul>
+            <li>Use the address-bar toggle (or Incognito) to choose when ChatGPT can view the current page.</li>
+            <li>Clearing browsing history wipes related browser memories; you can also archive individual memories in Settings.</li>
+            <li>Agent mode can’t install extensions, download files, or poke other desktop apps, and it pauses on sensitive sites so you approve every step.</li>
+          </ul>
+        </div>
+
+
+        <h4>Sample Prompt – Thermal Printer Price Check</h4>
+        <div class="copyable-snippet" markdown="0">
+          <pre id="atlas-printer">Check Amazon, Staples, B&H, and ULINE (I’m already signed in). Search for “4x6 thermal shipping printer,” pull the top three models that are in stock, and capture price, shipping estimate, review count + average rating, and notable pros/cons from the first page of reviews. Build a comparison table and note if another retailer beats the price or warranty for each model.</pre>
+          <button type="button" class="copy-snippet-btn" aria-label="Copy Atlas shopping prompt" data-copy-target="atlas-printer">
+            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
+          </button>
+        </div>
+
         <button type="button" class="close-section-btn" data-section="atlas">Close Atlas section</button>
       </div>
     </div>
