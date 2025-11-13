@@ -180,34 +180,6 @@ Implementation notes
     </div>
   </div>
 
-  <div class="feature-section" id="data-analysis">
-    <button type="button" class="example-toggle" id="toggle-data-analysis" aria-expanded="false" aria-controls="content-data-analysis">
-      Data Analysis & Charts
-    </button>
-    <div id="content-data-analysis" class="example-content" role="region" aria-hidden="true" aria-labelledby="toggle-data-analysis">
-      <div class="example-content-inner">
-        <p><strong>Data analysis</strong> runs directly in ChatGPT. Upload a CSV or spreadsheet, and it can run Python code inline to clean data, calculate statistics, and generate charts. No separate tools required.</p>
-        <p>Use this when you need quick insights from sensor data, field measurements, or any tabular dataset. ChatGPT handles the code behind the scenes and returns visualizations you can download.</p>
-
-        <h4>Sample Prompt – Soil Moisture Visualization</h4>
-        <p>Upload sensor data and get a multi-depth chart in one prompt.</p>
-        <div class="resource-buttons">
-          <a class="resource-btn" href="{{ '/assets/meter-sensor-1-Configuration 1-1763015006.2595851.csv' | url }}" target="_blank" rel="noopener" download>⬇️ Download sample sensor data</a>
-        </div>
-        <p class="asset-note">After downloading, upload the CSV to ChatGPT and paste the prompt below.</p>
-        <div class="copyable-snippet" markdown="0">
-          <pre id="data-soil-moisture">Can you create a stacked line chart of the soil moisture with all the depths on one chart?</pre>
-          <button type="button" class="copy-snippet-btn" aria-label="Copy prompt" data-copy-target="data-soil-moisture">
-            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
-          </button>
-        </div>
-
-        
-        <button type="button" class="close-section-btn" data-section="data-analysis">Close Data Analysis section</button>
-      </div>
-    </div>
-  </div>
-
 <div class="feature-section" id="image-generation">
     <button type="button" class="example-toggle" id="toggle-image-generation" aria-expanded="false" aria-controls="content-image-generation">
       Image Generation (DALL-E)
@@ -453,33 +425,18 @@ Return the memo in Markdown so I can copy/paste it into the project files.</pre>
         <h4>Sample Task – UC Merced Site QA Sweep</h4>
         <p>Stay ahead of broken links or typos across ucmerced.edu without manually spot-checking every page.</p>
         <div class="copyable-snippet" markdown="0">
-          <pre id="task-aes">Create a recurring task called "UCM Site QA Sweep" to run every Monday at 6 AM PT.
+          <pre id="task-aes">Create a recurring task called "AES Site QA Sweep" to run every Monday at 6 AM PT.
 Each run, crawl every public page on https://ucmerced.edu to check for:
-Broken or redirected links
-Spelling and grammar mistakes
-Missing files or broken images
-4xx or 5xx HTTP status codes
-Return a Markdown table listing each issue with its URL, Problem Type, Suggested Fix, and Priority, then end with a "Top Fixes" list highlighting the three most urgent items.</pre>
-          <button type="button" class="copy-snippet-btn" aria-label="Copy task prompt" data-copy-target="task-aes">
-            <span class="copy-snippet-icon" aria-hidden="true">📋</span>
-          </button>
-        </div>
-
-<h4>Same prompt if you don't want to wait for the schedule:</h4>
-
-        <div class="copyable-snippet" markdown="0">
-          <pre id="task-aes">Crawl every public page on https://ucmerced.edu to check for:
-Broken or redirected links
-Spelling and grammar mistakes
-Missing files or broken images
-4xx or 5xx HTTP status codes
+- Broken or redirected links
+- Spelling and grammar mistakes
+- Missing files or broken images
+- 4xx or 5xx HTTP status codes
 
 Return a Markdown table listing each issue with its URL, Problem Type, Suggested Fix, and Priority, then end with a "Top Fixes" list highlighting the three most urgent items.</pre>
           <button type="button" class="copy-snippet-btn" aria-label="Copy task prompt" data-copy-target="task-aes">
             <span class="copy-snippet-icon" aria-hidden="true">📋</span>
           </button>
         </div>
-        
 
         <h4>Sample Task – California Reservoir Snapshot</h4>
         <p>Automate a statewide water-level briefing.</p>
