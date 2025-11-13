@@ -51,6 +51,13 @@ Use the accordions below to jump into the tools and learn about what they can do
             <span class="copy-snippet-icon" aria-hidden="true">📋</span>
           </button>
         </div>
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini Deep Research</strong> works similarly—available in Gemini Advanced. Click the "Deep research" button, submit your query, and it spends up to 15 minutes analyzing sources and producing a cited report. Access it at <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a> (requires Gemini Advanced subscription).</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude</strong> doesn't have a dedicated deep research mode, but you can achieve similar results through extended conversation with web search enabled (Projects feature on claude.ai). Ask Claude to "research X thoroughly, cite sources, and provide a comprehensive report," and it will use multiple searches and reasoning steps to build a detailed answer. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>.</p>
+
         <button type="button" class="close-section-btn" data-section="deep-research">Close Deep Research section</button>
       </div>
     </div>
@@ -91,7 +98,13 @@ If some information is missing, note it clearly in the CSV. Before returning the
           </button>
         </div>
 
-       
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> can browse the web and perform multi-step tasks through conversation. While it doesn't have a dedicated "agent mode" with a virtual computer, you can ask Gemini to search multiple sources, synthesize information, and format results. Use the "Enable extensions" toggle to give it access to Google Search, Maps, and other Google services at <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude Code</strong> is Claude's command-line tool for coding workflows. It reads and writes files, runs bash commands, executes git operations, and manages full development tasks. Use it when you need filesystem access, refactoring, debugging, or building features. Download it at <a href="https://claude.com/claude-code" target="_blank" rel="noopener">claude.com/claude-code</a>. For web research, use claude.ai with Projects and enable web search.</p>
+
         <button type="button" class="close-section-btn" data-section="agent">Close Agent section</button>
       </div>
     </div>
@@ -175,6 +188,13 @@ Implementation notes
             <span class="copy-snippet-icon" aria-hidden="true">📋</span>
           </button>
         </div>
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> creates artifacts in a side panel when you ask for documents, code, or structured content. The artifact appears next to the conversation, and you can edit it live, export it, or continue iterating with follow-up prompts. Access it at <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude Artifacts</strong> work the same way—when you request a document, code, or diagram, Claude creates it in a separate panel that you can edit, iterate on, and export. Artifacts auto-trigger for substantial content and stay accessible throughout the conversation. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>.</p>
+
         <button type="button" class="close-section-btn" data-section="canvas">Close Canvas section</button>
       </div>
     </div>
@@ -202,7 +222,12 @@ Implementation notes
           </button>
         </div>
 
-        
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> can analyze uploaded data and generate charts through Python execution. Upload your CSV or spreadsheet, ask Gemini to create visualizations or calculate statistics, and it will run code inline to produce results. Works the same way at <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude</strong> analyzes data and creates charts on claude.ai. Upload your CSV or spreadsheet file, then ask Claude to generate visualizations or run statistical analysis. Charts appear as artifacts you can export. For more advanced analysis with file system access, use Claude Code. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> or <a href="https://claude.com/claude-code" target="_blank" rel="noopener">claude.com/claude-code</a>.</p>
+
         <button type="button" class="close-section-btn" data-section="data-analysis">Close Data Analysis section</button>
       </div>
     </div>
@@ -252,6 +277,13 @@ Implementation notes
             <span class="copy-snippet-icon" aria-hidden="true">📋</span>
           </button>
         </div>
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> uses Imagen 3 for image generation. Just ask Gemini to create an image, and it will generate it inline in the conversation. You can request variations, edits, or different styles through follow-up prompts. Access it at <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude</strong> cannot generate images, but it excels at analyzing images, describing visual content in detail, and helping you craft precise prompts for other image generation tools. Upload an image to Claude and ask it to "write a detailed prompt for DALL-E based on this image" to bridge the gap. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>.</p>
+
         <button type="button" class="close-section-btn" data-section="image-generation">Close Image Generation section</button>
       </div>
     </div>
@@ -304,6 +336,12 @@ Behavior requirements:
           </button>
         </div>
 
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini Gems</strong> are custom chatbots you create with specific instructions, tone, and behavior. Access Gem Manager at <a href="https://gemini.google.com/gems" target="_blank" rel="noopener">gemini.google.com/gems</a>, click "New Gem," add your instructions, and save. Gems appear in your sidebar and can be shared with others. Like GPTs, they're perfect for specialized workflows, branded assistants, or team-specific helpers.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude Projects</strong> serve a similar purpose—create a project, add custom instructions, upload reference files (SOPs, datasets, style guides), and all chats inside inherit that context. Projects can be shared with teammates for collaboration. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> by clicking "New project" in the sidebar.</p>
+
         <button type="button" class="close-section-btn" data-section="gpts">Close GPTs section</button>
       </div>
     </div>
@@ -340,6 +378,13 @@ Behavior requirements:
             <span class="copy-snippet-icon" aria-hidden="true">📋</span>
           </button>
         </div>
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> has native Google Search integration built in. It automatically searches when needed, or you can enable the Google Search extension to force live lookups. Results include inline citations and you can click through to sources. Access it at <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a> and toggle "Google Search" in extensions.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude</strong> on claude.ai can search the web when needed. It automatically determines when to search for current information and includes inline citations. You can also explicitly ask Claude to "search for [topic]" to guarantee a live web lookup. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>.</p>
+
         <button type="button" class="close-section-btn" data-section="search">Close Search section</button>
       </div>
     </div>
@@ -381,7 +426,14 @@ Behavior requirements:
           </button>
         </div>
 
-        <p>If you change your mind, just say “Forget that detail about Field Day” (or clear it in Manage Memory). ChatGPT’s memories aren’t tied to a single chat, so deletions must happen via the memory list, not by deleting the conversation.</p>
+        <p>If you change your mind, just say "Forget that detail about Field Day" (or clear it in Manage Memory). ChatGPT's memories aren't tied to a single chat, so deletions must happen via the memory list, not by deleting the conversation.</p>
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> remembers details across conversations automatically. Access memory settings at <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a> under Settings → Saved info. You can view, edit, or delete specific memories, and toggle the feature on/off. Use "Remember this:" to explicitly store facts, or let Gemini learn preferences naturally.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude</strong> also maintains memory across conversations. Access memory controls at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> under Settings → Memory. You can review stored facts, delete individual memories, or disable the feature entirely. Say "Remember that [detail]" to store specific information, or Claude will pick up on consistent preferences over time.</p>
+
         <button type="button" class="close-section-btn" data-section="memory">Close Memory section</button>
       </div>
     </div>
@@ -434,7 +486,14 @@ Return the memo in Markdown so I can copy/paste it into the project files.</pre>
           </button>
         </div>
 
-        <p><em>Tip:</em> moving an existing chat into a project inherits the instructions/files instantly, so your old brainstorming thread can continue with the new context. Use project-only memory for sensitive collaborations where you don’t want cross-project bleed-through.</p>
+        <p><em>Tip:</em> moving an existing chat into a project inherits the instructions/files instantly, so your old brainstorming thread can continue with the new context. Use project-only memory for sensitive collaborations where you don't want cross-project bleed-through.</p>
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> doesn't have a dedicated "Projects" feature yet, but you can organize conversations by naming them descriptively and using Gems (custom chatbots) with specific instructions for recurring workflows. Keep related chats grouped by topic and use memory to maintain context across sessions.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude Projects</strong> work nearly identically—create a project workspace, upload files (PDFs, SOPs, datasets), add custom instructions, and all chats inside inherit that context. Projects support team collaboration with shared access. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> by clicking "New project" in the sidebar.</p>
+
         <button type="button" class="close-section-btn" data-section="projects">Close Projects section</button>
       </div>
     </div>
@@ -496,6 +555,10 @@ Finally, send me a notification containing the complete Markdown report and the 
           </button>
         </div>
         <p><em>Tip:</em> for mobile push notifications, create the task on iOS/Android first so the app can request notification permissions. For more details, see the Tasks docs inside Settings → Notifications.</p>
+
+        <h4>Platform Availability</h4>
+        <p><strong>Scheduled Tasks are currently exclusive to ChatGPT.</strong> Neither Gemini nor Claude offer native scheduled/recurring prompts at this time. For similar automation, you'd need to use external tools like Zapier, n8n, or cron jobs with API calls to run prompts on a schedule.</p>
+
         <button type="button" class="close-section-btn" data-section="scheduled-tasks">Close Scheduled Tasks section</button>
       </div>
     </div>
@@ -516,6 +579,12 @@ Finally, send me a notification containing the complete Markdown report and the 
             <span class="copy-snippet-icon" aria-hidden="true">📋</span>
           </button>
         </div>
+
+        <h4>Equivalent in Gemini</h4>
+        <p><strong>Gemini</strong> supports custom instructions through its settings. Access <a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>, go to Settings → Gemini preferences, and add your tone, style, and context preferences. Gemini will apply these instructions to all future conversations.</p>
+
+        <h4>Equivalent in Claude</h4>
+        <p><strong>Claude</strong> offers "Custom styles" where you can set tone, response preferences, and personal context. Access it at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> under Settings → Custom styles. Add your writing preferences and Claude will adapt its responses across all conversations. You can also set project-specific instructions within Projects.</p>
 
         <button type="button" class="close-section-btn" data-section="custom-instructions">Close Custom Instructions section</button>
       </div>
@@ -563,6 +632,9 @@ Finally, send me a notification containing the complete Markdown report and the 
             <span class="copy-snippet-icon" aria-hidden="true">📋</span>
           </button>
         </div>
+
+        <h4>Platform Availability</h4>
+        <p><strong>Atlas is currently exclusive to ChatGPT.</strong> Neither Gemini nor Claude offer a dedicated AI-integrated browser at this time. For similar workflows, you can use browser extensions or automation tools like Selenium/Playwright combined with API calls to Gemini or Claude, though these require more technical setup.</p>
 
         <button type="button" class="close-section-btn" data-section="atlas">Close Atlas section</button>
       </div>
